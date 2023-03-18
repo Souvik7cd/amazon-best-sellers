@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f1f5f8;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+    text-transform: capitalize;
+}
+
+.booklist {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 784px) {
+    .booklist {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.book {
+    position: relative;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow:
+        1px 1px 4px #ccc,
+        -1px 1px 4px #ccc,
+        1px -1px 4px #ccc,
+        -1px -1px 4px #ccc;
+}
+
+.book span.shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 0.4rem 1.4rem;
+    font-weight: bold;
+    border-radius: 1rem 0 0;
+    width: 0;
+    height: 0;
+    border-top: 2rem solid tomato;
+    border-right: 0.8rem solid transparent;
+}
+
+.book span.number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 0.4rem 0.9rem;
+    font-weight: bold;
+}
+
+.book img {
+    width: 70%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .book img {
+        width: 60%;
+        object-fit: cover;
+    }    
+}
+
+.book h2 {
+    margin-top: 1rem;
+}
+
+.book h4 {
+    color: #817d98;
+    font-size: 0.9rem;
+}
+
+input, button {
+    padding: 0.4rem;
+    font-size: 1rem;
+    margin: 0.6rem;
 }
